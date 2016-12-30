@@ -1,0 +1,128 @@
+div{
+  display:block;
+}
+.login-page .wrapper{
+  display:block;
+  position:fixed;
+  width:100vw;
+  height:100vh;
+  top:0;
+  left:0;
+  background-attachment:fixed;
+  background-size:cover;
+  background-position:50% 50%;
+}
+
+.login-wrapper{
+  position:absolute;
+  width:350px;
+  height:100vh;
+  left:0px;
+  top:0;
+  background-color:#fff;
+ -webkit-box-shadow: 2px 0px 5px 0px rgba(0,0,0,1);
+-moz-box-shadow: 2px 0px 5px 0px rgba(0,0,0,1);
+box-shadow: 2px 0px 5px 0px rgba(0,0,0,1);
+}
+.login-form-wrapper{
+  position:absolute;
+  top:50%;
+  display:block;
+  height:auto;
+  transform:translateY(-50%);
+  padding:20px;
+}
+
+.login-form-wrapper .logo-login{
+  text-align:center;
+  padding:0px 0px 20px 0px;
+}
+
+.login-form-wrapper .form input{
+  padding:20px;
+  width:100%;
+  display:inline-block;
+  border:none;
+  border-bottom:1px solid #666;
+}
+input{
+  box-sizing : border-box;
+}
+.login-form-wrapper .form button[type="submit"]{
+  display:block;
+  width:100%;
+  border:1px solid #666;
+  padding:20px;
+  font-size:20px;
+  color:#666;
+  margin-top:30px;
+  background-color:#fff;
+  transition:all ease .3s;
+  cursor: pointer;
+}
+.login-form-wrapper .form button[type="submit"]:hover{
+  background-color:#666;
+  color:#fff;
+}
+
+a{
+  transition:all ease .3s;
+}
+.wrapper-navigation{
+  position:fixed;
+  display:block;
+  width:280px;
+  height:100vh;
+  background-color:#ddd;
+  opacity:1;
+  box-shadow: 0px 0px 5px 0px #000;
+}
+.wrapper-content{
+  min-height:100vh;
+  margin-left:280px;
+  display:block;
+  background-color:#fff;
+}
+.logo{
+  display:block;
+  text-align:center;
+  padding-top:40px;
+  padding-bottom:40px;
+}
+ul.navigation{
+  padding-left:0;
+  background-color:#00adee;
+}
+
+ul.navigation li{
+  display:block;
+}
+ul.navigation li a{
+  display:block;
+  padding:20px;
+  padding-left:70px;
+  background-color:#666;
+  border-bottom:1px solid #fff;
+  color:#fff;
+  text-decoration:none;
+  position:relative;
+}
+ul.navigation li a:hover{
+  background-color:#fff;
+  color:#0094D9;
+}
+ul.navigation ul{
+  padding-left:0px;
+}
+ul.navigation li a i{
+  display:inline-block;
+  position:absolute;
+  width:50px;
+  top:0;
+  text-align:center;
+  left:0;
+  height:100%;
+  font-size:30px;
+  line-height:2;
+  background-color:#333;
+}
