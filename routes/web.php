@@ -12,9 +12,7 @@
 */
 
 Route::get('/', 'HomeController@dashboard');
-route::get('anotherPage', function(){
-    return 'this is anotherPage';
-});
+Route::get('anotherPage', 'HomeController@cekspeed');
 
 Route::get('registerModal','UserController@getRegister')->middleware('auth');
 Route::get('userdata','UserController@getUser');
