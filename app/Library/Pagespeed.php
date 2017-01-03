@@ -3,6 +3,7 @@ namespace App\Library;
 use Illuminate\Http\Response;
 use \Storage;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\File;
 
 class GooglePageSpeed
 {
@@ -20,9 +21,9 @@ class GooglePageSpeed
 
   public function __construct($url, $folder_name, $time)
   {
-    $this->getResults('http://'.$url);
-    $this->url = 'http://'.$url;
-    $this->folder_name = $url.'/pagespeed';
+    $this->getResults($url);
+    $this->url = $url;
+    $this->folder_name = $folder_name;
     $this->time = $time;
   }
 
@@ -89,11 +90,13 @@ class GooglePageSpeed
   public function desktop()
   {
     $this->parseResult('desktop');
+    //store the original data 
     if($this->finalResult['desktop'] != null)
     {
       $content = json_encode($this->finalResult['desktop'], JSON_PRETTY_PRINT);
       $path = 'result/'.$this->folder_name.'/'.$this->time;
-      Storage::makeDirectory($path, 2775, true);
+      //File::makeDirectory($path, 0775, true, true);
+      Storage::disk('local')->makeDirectory($path, 2775, true);
       Storage::disk('local')->put($path.'/pagespeed-desktop.json', $content);
       return $path.'/pagespeed-desktop.json';
     }
@@ -107,7 +110,8 @@ class GooglePageSpeed
     {
         $content = json_encode($this->finalResult['mobile'], JSON_PRETTY_PRINT);
         $path = 'result/'.$this->folder_name.'/'.$this->time;
-        Storage::makeDirectory($path, 2775, true);
+        //File::makeDirectory($path, 0775, true, true);
+        Storage::disk('local')->makeDirectory($path, 2775, true);
         Storage::disk('local')->put($path.'/pagespeed-mobile.json', $content);
         return $path.'/pagespeed-mobile.json';
     }

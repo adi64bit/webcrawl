@@ -24,14 +24,20 @@ class HomeController extends Controller
 
     }
     public function cekspeed(){
-    	$time = Carbon::now();
-      	$domainInfo = new DomainInfo('www.komodolines.com', 'tes', $time);
-      	//Get creation & expiration domain date
-      	$domainInfo->getHostDateInfo();
-      	//Get overall domain info;
+    	$time = Carbon::now()->format('Y-m-d_H\'i\'s');
+      $url = 'http://www.handaragolfresort.com/';
+      $folder_name = 'www.handaragolfresort.com';
+      $domainInfo = new DomainInfo($url, $folder_name, $time);
+      //Get creation & expiration domain date
+      $domainInfo->DomainInfo();
+      //Get overall domain info;
      	//$domainInfo->getBuiltWithInfo();
-    	$pagespeed = new GooglePageSpeed('www.komodolines.com', 'tes', $time);
-	    $pagespeed->mobile();
+    	//$pagespeed = new GooglePageSpeed($url, $folder_name, $time);
+	    //$pagespeed->mobile();
+      //$pagespeed->desktop();
+     
+      //Storage::makeDirectory('domain test/', 0775, true);
+      //Storage::disk('local')->put('domain test/domaininfo.txt', $result);
 	    return view('pages.basePage');
     }
 }
