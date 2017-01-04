@@ -4,6 +4,7 @@ use Symfony\Component\DomCrawler\Crawler as DomCrawler;
 use Carbon\Carbon;
 use \Storage;
 use App\Helper\GlobalFunction as GF;
+use App\Library\DetectCMS\DetectCMS;
 
 define('DOMAIN_DATE', 'domain_date');
 define('DOMAIN_INFO', 'domain_info');
@@ -47,6 +48,14 @@ class DomainInfo{
     $url = $this->parseUrl($this->url);
     $method = 'whois';
     $endpoint = WHOIS.$url;
+
+    //check CMS
+    $cms = new DetectCMS('http://'.$url);
+    if($cms->getResult()) {
+        $this->date_info[DOMAIN_DATE]['website_cms'] = $cms->getResult();
+    } else {
+        $this->date_info[DOMAIN_DATE]['website_cms'] = 'CMS couldn\'t be detected';
+    } 
     $this->date_info[DOMAIN_DATE]['creation_date'] = 'not found';
     $this->date_info[DOMAIN_DATE]['update_date'] = 'not found';
     $this->date_info[DOMAIN_DATE]['expiration_date'] = 'not found';
@@ -74,4 +83,5 @@ class DomainInfo{
     return $path.'/domain-date.json';
   }
 }
+
 ?>

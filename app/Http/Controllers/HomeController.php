@@ -9,6 +9,7 @@ use \Storage;
 use GuzzleHttp\TransferStats;
 use App\Library\GooglePageSpeed;
 use App\Library\DomainInfo;
+use App\Library\SearchEngine;
 
 class HomeController extends Controller
 {
@@ -25,17 +26,16 @@ class HomeController extends Controller
     }
     public function cekspeed(){
     	$time = Carbon::now()->format('Y-m-d_H\'i\'s');
-      $url = 'http://www.handaragolfresort.com/';
+      $url = 'http://www.handaragolfresort.com';
       $folder_name = 'www.handaragolfresort.com';
       $domainInfo = new DomainInfo($url, $folder_name, $time);
-      //Get creation & expiration domain date
       $domainInfo->DomainInfo();
-      //Get overall domain info;
-     	//$domainInfo->getBuiltWithInfo();
-    	//$pagespeed = new GooglePageSpeed($url, $folder_name, $time);
-	    //$pagespeed->mobile();
-      //$pagespeed->desktop();
-     
+    
+    	$pagespeed = new GooglePageSpeed($url, $folder_name, $time);
+	    $pagespeed->mobile();
+      $pagespeed->desktop();
+      $searchengine = new SearchEngine($url, $folder_name, $time);
+      $searchengine->getAllResult();
       //Storage::makeDirectory('domain test/', 0775, true);
       //Storage::disk('local')->put('domain test/domaininfo.txt', $result);
 	    return view('pages.basePage');
