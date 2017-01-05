@@ -67,9 +67,9 @@ class DomainInfo{
       $pattern = '/([0-9]{4}-[0-9]{2}-[0-9]{2})|([0-9]{2}-[a-zA-Z]{3}-[0-9]{4})/';
       preg_match_all($pattern, $dom, $match);
       if(!empty($match[0])){
-        $this->date_info[DOMAIN_DATE]['creation_date'] = $match[0][1];
-        $this->date_info[DOMAIN_DATE]['update_date'] = $match[0][2];
-        $this->date_info[DOMAIN_DATE]['expiration_date'] = $match[0][0];
+        $this->date_info[DOMAIN_DATE]['creation_date'] = (isset($match[0][1])) ? $match[0][1] : 'not found';
+        $this->date_info[DOMAIN_DATE]['update_date'] = (isset($match[0][2])) ? $match[0][2] : 'not found';
+        $this->date_info[DOMAIN_DATE]['expiration_date'] = (isset($match[0][0])) ? $match[0][0] : 'not found';
       }
       $this->date_info[DOMAIN_DATE]['code'] = 200;
     } catch(\GuzzleHttp\Exception\RequestException $e){

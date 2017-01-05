@@ -1,5 +1,5 @@
-<div class="sidebar" data-color="orange" data-image="{{ URL::asset('assets/images/background-image.png') }}">
-
+<!-- <div class="sidebar" data-color="orange" data-image="{{ URL::asset('assets/images/background-image.png') }}"> -->
+<div class="sidebar" data-color="green" data-image="#">
     <!--
 
         Tip 1: you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple"
