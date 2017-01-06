@@ -22,11 +22,11 @@ class HomeController extends Controller
     }
 
     public function dashboard(){
-        $time = "2017-01-05_07'04'11";
+        /*$time = "2017-01-05_07'04'11";
         $timex = Carbon::now()->format('Y-m-d_H\'i\'s');
         $url = 'http://www.komodolines.com';
         $folder_name = 'www.komodolines.com';
-        /*$crawler = array(
+        $crawler = array(
             'domain' => json_decode(Storage::get('/result/'.$folder_name.'/'.$time.'/domain-date.json')),
             'index' => json_decode(Storage::get('/result/'.$folder_name.'/'.$time.'/search-engine-index.json')),
             'PageSpeed' => array (
@@ -34,7 +34,7 @@ class HomeController extends Controller
                   'mobile' => json_decode(Storage::get('/result/'.$folder_name.'/'.$time.'/pagespeed-mobile.json'))
               ),
             'crawler' => json_decode(Storage::get('/result/'.$folder_name.'/'.$time.'/crawler.json'))
-          );*/
+          );
 
         $job = new Crawlsite(
                   $url,
@@ -43,7 +43,7 @@ class HomeController extends Controller
                   $timex
               );
          
-      $this->dispatch($job);
+      $this->dispatch($job);*/
       //QueueStatus::show('crawler', $this->queue_id, 0);
         return view('pages.basePage');
     }
