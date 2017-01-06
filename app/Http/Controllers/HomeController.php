@@ -2,11 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Config;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use \Storage;
 
 use GuzzleHttp\TransferStats;
+use App\Jobs\Crawlsite;
 use App\Library\GooglePageSpeed;
 use App\Library\DomainInfo;
 use App\Library\SearchEngine;
@@ -20,8 +23,10 @@ class HomeController extends Controller
 
     public function dashboard(){
         $time = "2017-01-05_07'04'11";
+        $timex = Carbon::now()->format('Y-m-d_H\'i\'s');
+        $url = 'http://www.komodolines.com';
         $folder_name = 'www.komodolines.com';
-        $crawler = array(
+        /*$crawler = array(
             'domain' => json_decode(Storage::get('/result/'.$folder_name.'/'.$time.'/domain-date.json')),
             'index' => json_decode(Storage::get('/result/'.$folder_name.'/'.$time.'/search-engine-index.json')),
             'PageSpeed' => array (
@@ -29,14 +34,24 @@ class HomeController extends Controller
                   'mobile' => json_decode(Storage::get('/result/'.$folder_name.'/'.$time.'/pagespeed-mobile.json'))
               ),
             'crawler' => json_decode(Storage::get('/result/'.$folder_name.'/'.$time.'/crawler.json'))
-          );
+          );*/
 
-        return dd($crawler);
+        $job = new Crawlsite(
+                  $url,
+                  1,
+                  $folder_name,
+                  $timex
+              );
+         
+      $this->dispatch($job);
+      //QueueStatus::show('crawler', $this->queue_id, 0);
+        return view('pages.basePage');
     }
 
     public function addDomain(){
 
     }
+    
     public function cekspeed(){
     	$time = Carbon::now()->format('Y-m-d_H\'i\'s');
       $url = 'http://www.komodolines.com';
@@ -51,7 +66,7 @@ class HomeController extends Controller
       $pagespeed->desktop();
       $searchengine = new SearchEngine($url, $folder_name, $time);
       $searchengine->getAllResult();
-      
+
       //Storage::makeDirectory('domain test/', 0775, true);
       //Storage::disk('local')->put('domain test/domaininfo.txt', $result);
 	    return view('pages.basePage');
