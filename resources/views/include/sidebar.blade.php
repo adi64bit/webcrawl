@@ -28,7 +28,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#" data-href="domainlist">
+                    <a href="#" data-href="addDomain">
                         <i class="pe-7s-note2"></i>
                         <p>Domain</p>
                     </a>

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class SEindex extends Migration
+class Domains extends Migration
 {
     /**
      * Run the migrations.
@@ -14,6 +14,11 @@ class SEindex extends Migration
     public function up()
     {
         //
+        Schema::create('domains', function (Blueprint $table) {
+          $table->increments('domain_id');
+          $table->string('url')->unique();
+          $table->timestamps();
+      });
     }
 
     /**
@@ -23,6 +28,6 @@ class SEindex extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('domains');
     }
 }

@@ -1,7 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\User;
+use App\Domain;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Http\Request;
@@ -49,13 +51,20 @@ class HomeController extends Controller
     }
 
     public function addDomain(){
-
+      $page = 'User';
+        $user_list = '';
+        if ( Auth::check() && Auth::user()->haveRole('admin') ){
+            $user_list = Domain::all();
+            return view('pages.domainPage', compact('page', 'domain_list'));
+        } else {
+            return view('pages.domainPage', compact('page', 'domain_list'));
+        }
     }
     
     public function cekspeed(){
-    	$time = Carbon::now()->format('Y-m-d_H\'i\'s');
-      $url = 'http://www.komodolines.com';
-      $folder_name = 'www.komodolines.com';
+    	/*$time = Carbon::now()->format('Y-m-d_H\'i\'s');
+      $url = 'http://www.puripangan.co.id';
+      $folder_name = 'www.puripangan.co.id';
       $crawler = new Crawler($url, $folder_name, $time);
       $crawler->traverse();
       $crawler->getLinks();
@@ -65,7 +74,7 @@ class HomeController extends Controller
 	    $pagespeed->mobile();
       $pagespeed->desktop();
       $searchengine = new SearchEngine($url, $folder_name, $time);
-      $searchengine->getAllResult();
+      $searchengine->getAllResult();*/
 
       //Storage::makeDirectory('domain test/', 0775, true);
       //Storage::disk('local')->put('domain test/domaininfo.txt', $result);

@@ -11,7 +11,7 @@ use App\Library\Crawler;
 use App\Helper\QueueStatus;
 use \Storage;
 
-class Crawlsite implements ShouldQueue
+class JobCrawler implements ShouldQueue
 {
     use InteractsWithQueue, SerializesModels;
 

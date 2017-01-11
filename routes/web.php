@@ -16,6 +16,8 @@ Route::get('anotherPage', 'HomeController@cekspeed');
 
 Route::get('registerModal','UserController@getRegister')->middleware('auth');
 Route::get('userdata','UserController@getUser');
+Route::get('addDomain','HomeController@addDomain');
+Route::post('insertDomain','MainController@insertDomain');
 Route::post('postRegister', 'UserController@postRegister')->middleware('auth');
 
 
