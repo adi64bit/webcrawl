@@ -1,11 +1,11 @@
 @extends('layout.basePage')
 
 @section('titlePage')
-User Page
+User Page 
 @stop
 
 @section('afterTitle')
-<button class="btn btn-info btn-fill" data-toggle="modal" data-target="#immModal" data-content-url="registerModal">Add New User</button>
+    <button class="btn btn-info btn-sm btn-fill" data-toggle="modal" data-target="#immModal" data-content-url="registerModal">Add New User</button>
 @stop
 
 @section('content')

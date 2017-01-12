@@ -33,11 +33,11 @@ class JobCrawler implements ShouldQueue
      *
      * @return void
      */
-    public function __construct($url, $id, $folder_name, $time)
+    public function __construct($url, $id, $queue_id, $folder_name, $time)
     {
       $this->url = $url;
       $this->id = $id;
-      //$this->queue_id = $queue_id;
+      $this->queue_id = $queue_id;
       $this->folder_name = $folder_name;
       $this->time = $time;
     }
@@ -49,18 +49,31 @@ class JobCrawler implements ShouldQueue
      */
     public function handle()
     {
-      //QueueStatus::show('crawler', $this->queue_id, 1, 0);
-      Log::info("Request cycle without Queues started");
-      $crawler = new Crawler($this->url, $this->folder_name, $this->time, 200, 5);
+      echo "[Crawler] \"Start\" ".$this->folder_name."\n";
+      QueueStatus::show('crawler', $this->queue_id, 1, 0);
+      $crawler = new Crawler($this->url, $this->folder_name, $this->time, 10, 2);
       $crawler->traverse();
       $crawler->getLinks();
-      Log::info("test");
-      //$this->result = $crawler->getLinks();
 
-      //$result = Result::find($this->id);
-      //$result->crawler = $this->result;
-      //QueueStatus::show('crawler', $this->queue_id, 2, 1);
-      //$result->save();
-      //echo "<".$this->folder_name."> crawler complete\n";
+      QueueStatus::show('crawler', $this->queue_id, 2, 1);
+      echo "[Crawler] \"Complete\" ".$this->folder_name."\n";
+    }
+
+    public function failed()
+    {
+      $error_result = array(
+        'code'    =>  404,
+        'url'     => $this->url,
+        'error_message' => 'File not found'
+      );
+
+      $content = json_encode($error_result, JSON_PRETTY_PRINT);
+      $path = 'result/'.$this->folder_name.'/'.$this->time;
+      Storage::makeDirectory($path, 2775, true);
+      Storage::disk('local')->put($path.'/crawler.json', $content);
+      $file = $path.'/crawler.json';
+
+      QueueStatus::show('crawler', $this->queue_id, 3, 1);
+      echo "[Crawler] \"Failed\" ".$this->folder_name."\n";
     }
 }

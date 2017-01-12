@@ -1,19 +1,23 @@
 jQuery(document).ready(function($){
-	$('a[data-href]').click(function(){
-		var href = $(this).attr('data-href');
-		$.ajax({
-		  method: "GET",
-		  url: href,
-		  success : function(response){
-		  	$('#content-push').html(response);
-		  },
-		  error : function(msg){
-		  	notify(msg['status'],href +' '+ msg['statusText'],'','danger','');
-		  	console.log(msg);
-		  	return false;
-		  }
-		});
-		return false;
+	$('a').click(function(){
+		if ($(this).attr('data-href')){
+			var href = $(this).attr('data-href');
+			$.ajax({
+			  method: "GET",
+			  url: href,
+			  success : function(response){
+			  	$('#content-push').html(response);
+			  },
+			  error : function(msg){
+			  	notify(msg['status'],href +' '+ msg['statusText'],'','danger','');
+			  	console.log(msg);
+			  	return false;
+			  }
+			});
+			return false;
+		} else {
+			return true;
+		}
 	});
 
 	$('body').on('click', 'button[data-target="#immModal"]', function(evt){
