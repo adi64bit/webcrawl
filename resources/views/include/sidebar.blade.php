@@ -16,32 +16,32 @@
 
             <ul class="nav">
                 <li class="active">
-                    <a href="#" data-href="dashboard">
+                    <a href="/">
                         <i class="pe-7s-graph"></i>
                         <p>Dashboard</p>
                     </a>
                 </li>
                 <li>
-                    <a href="#" data-href="queuelist">
+                    <a href="/queuelist">
                         <i class="pe-7s-server"></i>
                         <p>Queue</p>
                     </a>
                 </li>
                 <li>
-                    <a href="#" data-href="addDomain">
+                    <a href="/addDomain">
                         <i class="pe-7s-note2"></i>
                         <p>Domain</p>
                     </a>
                 </li>
                 <li>
-                    <a href="#" data-href="reportlist">
+                    <a href="/reportlist">
                         <i class="pe-7s-news-paper"></i>
                         <p>Report</p>
                     </a>
                 </li>
                 @if ( Auth::user()->haveRole('admin') )
                 <li>
-                    <a href="#" data-href="/userdata">
+                    <a href="/userdata">
                         <i class="pe-7s-users"></i>
                         <p>user</p>
                     </a>

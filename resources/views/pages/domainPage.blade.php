@@ -1,27 +1,28 @@
-
-
-@extends('layout.basePage')
-
-@section('titlePage')
-Domain Page
-@stop
-
-@section('afterTitle')
-<form action="{{ url(action('MainController@insertDomain')) }}" method="post" class="register-form">
-	{{ csrf_field() }}
-  <div class="input-group">
-    <span class="input-group-addon">http://</span>
-    <input name="url" type="text" class="form-control" placeholder="Insert Domain">
-    <div class="input-group-btn">
-      <button class="btn btn-default" type="submit">
-        Add To Queue
-      </button>
-    </div>
-  </div>
-</form>
-@stop
+@extends('layout.template')
 
 @section('content')
+    <div class="col-md-12">
+        <div class="card card-plain">
+            <div class="header">
+                <h3 class="title" style="text-transform: uppercase;">Domain Page</h3>
+                <p class="category"></p>
+            </div>
+            <div class="content">
+                <form action="{{ url(action('MainController@insertDomain')) }}" method="post" class="register-form">
+                    {{ csrf_field() }}
+                  <div class="input-group">
+                    <span class="input-group-addon">http://www.</span>
+                    <input name="url" type="text" class="form-control" placeholder="Insert Domain">
+                    <div class="input-group-btn">
+                      <button class="btn btn-default" type="submit">
+                        Add To Queue
+                      </button>
+                    </div>
+                  </div>
+                </form>
+            </div>
+        </div>
+    </div>
     <div class="col-md-12">
         <div class="card">
             <div class="header">
@@ -42,7 +43,7 @@ Domain Page
                         <tr>
                             <td>http://{{ $domain->url }}</td>
                             <td>{{ $domain->created_at }}</td>
-                            <td>{{ $domain->update_at }}</td>
+                            <td>{{ $domain->updated_at }}</td>
                         </tr>
                         @endforeach
                     </tbody>
@@ -57,3 +58,4 @@ Domain Page
 
                 
                                        
+                                    

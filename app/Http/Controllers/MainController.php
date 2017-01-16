@@ -25,6 +25,7 @@ use App\Domain;
 use App\QueueList;
 
 use App\Helper\GlobalFunction as GF;
+use App\Helper\QueueStatus;
 
 use App\Library\GooglePageSpeed;
 use App\Library\Crawler;

@@ -16,6 +16,9 @@
 			<div class="content">
 	            <div class="container-fluid" id="content-push">
 	            	<div class="loader"></div>
+	            	<div class="content-wrapper">
+						<div class="row">@yield('content')</div>
+					</div>
 	            </div>
             </div>
             <footer class="footer">

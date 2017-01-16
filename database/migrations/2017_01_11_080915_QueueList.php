@@ -15,15 +15,16 @@ class QueueList extends Migration
     {
       Schema::create('queue_lists', function (Blueprint $table) {
           $table->increments('queue_id');
-          $table->integer('domain_id');
-          $table->string('pagespeed');
-          $table->string('crawler');
-          $table->string('domain_info');
-          $table->string('duplicate_content');
-          $table->string('search_engine_index');
-          $table->string('keyword_frequency');
-          $table->string('social_interaction');
-          $table->string('overall_status');
+          $table->integer('domain_id')->nullable();
+          $table->string('pagespeed')->nullable();
+          $table->string('crawler')->nullable();
+          $table->string('domain_info')->nullable();
+          $table->string('duplicate_content')->nullable();
+          $table->string('search_engine_index')->nullable();
+          $table->string('keyword_frequency')->nullable();
+          $table->string('social_interaction')->nullable();
+          $table->string('overall_status')->nullable();
+          $table->string('is_complete')->nullable();
           $table->timestamps();
       });
     }

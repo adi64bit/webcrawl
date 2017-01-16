@@ -52,9 +52,9 @@ class HomeController extends Controller
 
     public function addDomain(){
       $page = 'User';
-        $user_list = '';
+        $domain_list = '';
         if ( Auth::check() && Auth::user()->haveRole('admin') ){
-            $user_list = Domain::all();
+            $domain_list = Domain::all();
             return view('pages.domainPage', compact('page', 'domain_list'));
         } else {
             return view('pages.domainPage', compact('page', 'domain_list'));

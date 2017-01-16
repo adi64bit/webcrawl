@@ -1,14 +1,15 @@
-@extends('layout.basePage')
-
-@section('titlePage')
-User Page 
-@stop
-
-@section('afterTitle')
-    <button class="btn btn-info btn-sm btn-fill" data-toggle="modal" data-target="#immModal" data-content-url="registerModal">Add New User</button>
-@stop
+@extends('layout.template')
 
 @section('content')
+    <div class="col-md-12">
+        <div class="card card-plain">
+            <div class="header">
+                <h3 class="title" style="text-transform: uppercase;">User Page</h3>
+                <p class="category"></p>
+                <button class="btn btn-info btn-sm btn-fill" data-toggle="modal" data-target="#immModal" data-content-url="registerModal">Add New User</button>
+            </div>
+        </div>
+    </div>
     <div class="col-md-12">
         <div class="card">
             <div class="header">
