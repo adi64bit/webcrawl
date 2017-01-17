@@ -1,0 +1,304 @@
+{
+    "webcrawler": {
+        "http:\/\/bcodes.info": {
+            "status_code": 200,
+            "title": [
+                "Juada Garden | Villa in Seminyak | Bungalow in Seminyak | Villa for Rent"
+            ],
+            "meta description": [
+                "Juada Garden located at the heart of Seminyak, Bali \u2013 only 15 minutes drive from Ngurah Rai International Airport and within walking distance to the famous Double Six beach. You can also find various shops that exist around Juada Garden.\""
+            ],
+            "meta keywords": [],
+            "image_count": 11,
+            "image_with_alt": {
+                "2": "Living room",
+                "3": "Private pool",
+                "4": "Bedroom",
+                "5": "Bathroom",
+                "6": "Bedroom",
+                "7": "Entertainment",
+                "8": "http:\/\/bcodes.info",
+                "9": "http:\/\/bcodes.info",
+                "10": "http:\/\/bcodes.info"
+            },
+            "link_count": 44,
+            "h1_contents": [
+                "Welcome to Juada Garden"
+            ],
+            "h2_contents": []
+        },
+        "\/villas": {
+            "status_code": 200,
+            "title": [
+                "Juada Garden | Villa in Seminyak | Bungalow in Seminyak | Villa for Rent"
+            ],
+            "meta description": [
+                "Juada Garden located at the heart of Seminyak, Bali \u2013 only 15 minutes drive from Ngurah Rai International Airport and within walking distance to the famous Double Six beach. You can also find various shops that exist around Juada Garden.\""
+            ],
+            "meta keywords": [],
+            "image_count": 8,
+            "image_with_alt": {
+                "2": "Living room",
+                "3": "Bedroom 1",
+                "4": "Bedroom",
+                "5": "Living room",
+                "6": "Bedroom",
+                "7": "Bedroom"
+            },
+            "link_count": 26,
+            "h1_contents": [
+                "Our Villas"
+            ],
+            "h2_contents": []
+        },
+        "\/about-us": {
+            "status_code": 200,
+            "title": [
+                "About Us | Juada Garden | Villa in Seminyak | Bungalow in Seminyak | Villa for Rent"
+            ],
+            "meta description": [
+                ""
+            ],
+            "meta keywords": [],
+            "image_count": 2,
+            "image_with_alt": [],
+            "link_count": 26,
+            "h1_contents": [],
+            "h2_contents": [
+                "About Us"
+            ]
+        },
+        "\/gallery": {
+            "status_code": 200,
+            "title": [
+                "Gallery | Juada Garden | Villa in Seminyak | Bungalow in Seminyak | Villa for Rent"
+            ],
+            "meta description": [
+                ""
+            ],
+            "meta keywords": [],
+            "image_count": 5,
+            "image_with_alt": [],
+            "link_count": 29,
+            "h1_contents": [
+                "Gallery"
+            ],
+            "h2_contents": []
+        },
+        "\/contact": {
+            "status_code": 200,
+            "title": [
+                "Contact | Juada Garden | Villa in Seminyak | Bungalow in Seminyak | Villa for Rent"
+            ],
+            "meta description": [
+                ""
+            ],
+            "meta keywords": [],
+            "image_count": 2,
+            "image_with_alt": [],
+            "link_count": 27,
+            "h1_contents": [
+                "Contact"
+            ],
+            "h2_contents": []
+        },
+        "\/villas\/villa-a": {
+            "status_code": 200,
+            "title": [
+                "Juada Garden | Villa in Seminyak | Bungalow in Seminyak | Villa for Rent"
+            ],
+            "meta description": [
+                "Juada Garden located at the heart of Seminyak, Bali \u2013 only 15 minutes drive from Ngurah Rai International Airport and within walking distance to the famous Double Six beach. You can also find various shops that exist around Juada Garden.\""
+            ],
+            "meta keywords": [],
+            "image_count": 12,
+            "image_with_alt": {
+                "2": "Living room",
+                "3": "Living room",
+                "4": "Living room",
+                "5": "Living room",
+                "6": "Bathroom",
+                "7": "Bathroom",
+                "8": "Bedroom",
+                "9": "Bedroom",
+                "10": "Bedroom",
+                "11": "Private pool"
+            },
+            "link_count": 26,
+            "h1_contents": [
+                "Villa 2B"
+            ],
+            "h2_contents": []
+        },
+        "\/villas\/villa-bunga": {
+            "status_code": 200,
+            "title": [
+                "Juada Garden | Villa in Seminyak | Bungalow in Seminyak | Villa for Rent"
+            ],
+            "meta description": [
+                "Juada Garden located at the heart of Seminyak, Bali \u2013 only 15 minutes drive from Ngurah Rai International Airport and within walking distance to the famous Double Six beach. You can also find various shops that exist around Juada Garden.\""
+            ],
+            "meta keywords": [],
+            "image_count": 8,
+            "image_with_alt": {
+                "2": "Bedroom 1",
+                "3": "Bedroom 2",
+                "4": "Bedroom 3",
+                "5": "Living room",
+                "6": "Bathroom",
+                "7": "Private pool"
+            },
+            "link_count": 26,
+            "h1_contents": [
+                "Villa 1B"
+            ],
+            "h2_contents": []
+        },
+        "\/villas\/villa-3a": {
+            "status_code": 200,
+            "title": [
+                "Juada Garden | Villa in Seminyak | Bungalow in Seminyak | Villa for Rent"
+            ],
+            "meta description": [
+                "Juada Garden located at the heart of Seminyak, Bali \u2013 only 15 minutes drive from Ngurah Rai International Airport and within walking distance to the famous Double Six beach. You can also find various shops that exist around Juada Garden.\""
+            ],
+            "meta keywords": [],
+            "image_count": 9,
+            "image_with_alt": {
+                "2": "Bedroom",
+                "3": "Living room",
+                "4": "Room 1",
+                "5": "Room 2",
+                "6": "Room 2",
+                "7": "Bathroom",
+                "8": "Bedroom"
+            },
+            "link_count": 26,
+            "h1_contents": [
+                "Villa 3A"
+            ],
+            "h2_contents": []
+        },
+        "\/villas\/villa-9": {
+            "status_code": 200,
+            "title": [
+                "Juada Garden | Villa in Seminyak | Bungalow in Seminyak | Villa for Rent"
+            ],
+            "meta description": [
+                "Juada Garden located at the heart of Seminyak, Bali \u2013 only 15 minutes drive from Ngurah Rai International Airport and within walking distance to the famous Double Six beach. You can also find various shops that exist around Juada Garden.\""
+            ],
+            "meta keywords": [],
+            "image_count": 10,
+            "image_with_alt": {
+                "2": "Living room",
+                "3": "Bathroom",
+                "4": "Bedroom",
+                "5": "Bedroom",
+                "6": "Kitchen",
+                "7": "Living room",
+                "8": "Private pool",
+                "9": "Bathroom"
+            },
+            "link_count": 26,
+            "h1_contents": [
+                "Villa 9"
+            ],
+            "h2_contents": []
+        },
+        "\/villas\/villa-10": {
+            "status_code": 200,
+            "title": [
+                "Juada Garden | Villa in Seminyak | Bungalow in Seminyak | Villa for Rent"
+            ],
+            "meta description": [
+                "Juada Garden located at the heart of Seminyak, Bali \u2013 only 15 minutes drive from Ngurah Rai International Airport and within walking distance to the famous Double Six beach. You can also find various shops that exist around Juada Garden.\""
+            ],
+            "meta keywords": [],
+            "image_count": 7,
+            "image_with_alt": {
+                "2": "Bedroom",
+                "3": "Bedroom",
+                "4": "Private pool",
+                "5": "Room 1",
+                "6": "Living room"
+            },
+            "link_count": 26,
+            "h1_contents": [
+                "Villa 10"
+            ],
+            "h2_contents": []
+        },
+        "\/villas\/room-1": {
+            "status_code": 200,
+            "title": [
+                "Juada Garden | Villa in Seminyak | Bungalow in Seminyak | Villa for Rent"
+            ],
+            "meta description": [
+                "Juada Garden located at the heart of Seminyak, Bali \u2013 only 15 minutes drive from Ngurah Rai International Airport and within walking distance to the famous Double Six beach. You can also find various shops that exist around Juada Garden.\""
+            ],
+            "meta keywords": [],
+            "image_count": 7,
+            "image_with_alt": {
+                "2": "Bedroom",
+                "3": "Sofa",
+                "4": "Westafle",
+                "6": "Entertainment"
+            },
+            "link_count": 26,
+            "h1_contents": [
+                "Room 1"
+            ],
+            "h2_contents": []
+        }
+    },
+    "sitemap": {
+        "\/sitemap.xml": {
+            "status_code": 404,
+            "filename": "\/sitemap.xml"
+        },
+        "\/feeds\/posts\/default?orderby=updated": {
+            "status_code": 404,
+            "filename": "\/feeds\/posts\/default?orderby=updated"
+        },
+        "\/sitemap.xml.gz": {
+            "status_code": 404,
+            "filename": "\/sitemap.xml.gz"
+        },
+        "\/sitemap_index.xml": {
+            "status_code": 404,
+            "filename": "\/sitemap_index.xml"
+        },
+        "\/s2\/sitemaps\/profiles-sitemap.xml": {
+            "status_code": 404,
+            "filename": "\/s2\/sitemaps\/profiles-sitemap.xml"
+        },
+        "\/sitemap.php": {
+            "status_code": 404,
+            "filename": "\/sitemap.php"
+        },
+        "\/sitemap_index.xml.gz": {
+            "status_code": 404,
+            "filename": "\/sitemap_index.xml.gz"
+        },
+        "\/vb\/sitemap_index.xml.gz": {
+            "status_code": 404,
+            "filename": "\/vb\/sitemap_index.xml.gz"
+        },
+        "\/sitemapindex.xml": {
+            "status_code": 404,
+            "filename": "\/sitemapindex.xml"
+        },
+        "\/sitemap.gz": {
+            "status_code": 404,
+            "filename": "\/sitemap.gz"
+        }
+    },
+    "robots": {
+        "\/robots.txt": {
+            "status_code": 200,
+            "filename": "\/robots.txt"
+        }
+    },
+    "code": 200,
+    "url": "http:\/\/bcodes.info"
+}

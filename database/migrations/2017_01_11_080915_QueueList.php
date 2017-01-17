@@ -16,7 +16,8 @@ class QueueList extends Migration
       Schema::create('queue_lists', function (Blueprint $table) {
           $table->increments('queue_id');
           $table->integer('domain_id')->nullable();
-          $table->string('pagespeed')->nullable();
+          $table->string('pagespeed_mobile')->nullable();
+          $table->string('pagespeed_desktop')->nullable();
           $table->string('crawler')->nullable();
           $table->string('domain_info')->nullable();
           $table->string('duplicate_content')->nullable();

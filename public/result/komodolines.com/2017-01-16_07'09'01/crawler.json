@@ -1,0 +1,355 @@
+{
+    "webcrawler": {
+        "http:\/\/komodolines.com\/en": {
+            "status_code": 200,
+            "title": [
+                "Komodo Lines | Endless Travelling | Flores Boat Charter, Rent, Komodo Flores Tour Packages | Trip Never Ending In Flores"
+            ],
+            "meta description": [
+                "KOMODO LINES provide charter boats, tour packages, and the vehicle rentals. our package covers flores island areas such as komodo Island, the island of padar, rinca Island, pink beach, coca Beach, wae rebo, kelimutu lake, and much more. our package prices vary and very affordable."
+            ],
+            "meta keywords": [
+                "boat komodo, boat charter to komodo, private charter, tour komodo, adventure tour flores, Rent car labuanbajo"
+            ],
+            "image_count": 19,
+            "image_with_alt": {
+                "0": "Home",
+                "1": "English",
+                "2": "English",
+                "3": "Bahasa Indonesia",
+                "4": "Bahasa Indonesia",
+                "16": "Facebook icon",
+                "17": "Instagram icon",
+                "18": "YouTube icon"
+            },
+            "link_count": 27,
+            "h1_contents": [
+                "Komodo Lines"
+            ],
+            "h2_contents": [
+                "Flores Boat Charter, Rent Service & Tour Operator",
+                "Our Accomodation",
+                "Contact"
+            ]
+        },
+        "http:\/\/komodolines.com\/id": {
+            "status_code": 200,
+            "title": [
+                "Komodo Lines | Tur FLORES OVERLAND | Sewa Kapal Labuanbajo | Rental Mobil Flores |Tur Komodo National Park"
+            ],
+            "meta description": [
+                "KOMODO LINES menyediakan paket charter kapal, paket tour flores , dan paket penyewaan \/ rental kendaraan. paket yang kami sediakan meliputi daerah flores seperti pulau komodo, pulau padar, pulau rinca, pink beach, pantai koka, kelimutu lake, wae rebo dan masih banyak lagi yang lainnya."
+            ],
+            "meta keywords": [
+                "kapal komodo, boat ke komodo, jalan ke kelimutu, Rent mobil flores, tour pulau komodo, adventure tour flores"
+            ],
+            "image_count": 19,
+            "image_with_alt": {
+                "0": "Depan",
+                "1": "English",
+                "2": "English",
+                "3": "Bahasa Indonesia",
+                "4": "Bahasa Indonesia",
+                "16": "Facebook icon",
+                "17": "Instagram icon",
+                "18": "YouTube icon"
+            },
+            "link_count": 27,
+            "h1_contents": [
+                "Komodo Lines"
+            ],
+            "h2_contents": [
+                "Flores Boat Charter, Rent Service & Tour Operator",
+                "Our Accomodation",
+                "Kontak Kami"
+            ]
+        },
+        "\/package-boat": {
+            "status_code": 200,
+            "title": [
+                "Boat Package | Kapal AC Murah Ke Komodo, Kapal AC Murah di Labuan Bajo, Charter Rental Sewa Kapal Phinisi Ke Komodo, Private Cruises Charter ke Pulau Komodo, sewa Kapal wisata ke pulau komodo, Sewa Kapal di Labuan Bajo, Kapal Kamar AC Ke Komodo"
+            ],
+            "meta description": [
+                "Komodolines.com menyediakan kapal wisata ke pulau komodo berbasis kamar AC dengan varian kapasitas mulai dari 1 kamar hingga 6 kamar tidur yang di lengkapi dengan kamar mandi yang terletak di luar kamar tidur dan di pakai bergantian. Paket Charter kapal yang kami sediakan menjangkau destinasi Taman Nasional Komodo, di antaranya : Pulau Rinca, Pulau Komodo, Pulau padar, pantai Merah, Gili Laba, kanawa, Pulau Bidadari dan pulau pulau kecil lainnya. kami Juga melayani charter dari Labuan bajo ke Lombok, atau dari Lombok ke Labuan bajo."
+            ],
+            "meta keywords": [
+                "charter kapal komodo, kapal komodo, boat komodo"
+            ],
+            "image_count": 28,
+            "image_with_alt": {
+                "0": "Home",
+                "1": "English",
+                "2": "English",
+                "3": "Bahasa Indonesia",
+                "4": "Bahasa Indonesia",
+                "25": "Facebook icon",
+                "26": "Instagram icon",
+                "27": "YouTube icon"
+            },
+            "link_count": 44,
+            "h1_contents": [],
+            "h2_contents": [
+                "Boat Package"
+            ]
+        },
+        "\/package-tour": {
+            "status_code": 200,
+            "title": [
+                "Package Tour | Komodo Lines"
+            ],
+            "meta description": [],
+            "meta keywords": [],
+            "image_count": 32,
+            "image_with_alt": {
+                "0": "Home",
+                "1": "English",
+                "2": "English",
+                "3": "Bahasa Indonesia",
+                "4": "Bahasa Indonesia",
+                "29": "Facebook icon",
+                "30": "Instagram icon",
+                "31": "YouTube icon"
+            },
+            "link_count": 48,
+            "h1_contents": [],
+            "h2_contents": [
+                "Package Tour"
+            ]
+        },
+        "\/package-rent": {
+            "status_code": 200,
+            "title": [
+                "Package Rent | Komodo Lines"
+            ],
+            "meta description": [],
+            "meta keywords": [],
+            "image_count": 20,
+            "image_with_alt": {
+                "0": "Home",
+                "1": "English",
+                "2": "English",
+                "3": "Bahasa Indonesia",
+                "4": "Bahasa Indonesia",
+                "17": "Facebook icon",
+                "18": "Instagram icon",
+                "19": "YouTube icon"
+            },
+            "link_count": 36,
+            "h1_contents": [],
+            "h2_contents": [
+                "Package Rent"
+            ]
+        },
+        "\/content\/about-us": {
+            "status_code": 200,
+            "title": [
+                "About Us | Komodo Lines"
+            ],
+            "meta description": [
+                "Komodo Lines Untouched paradise ... ... ... ... ... ...."
+            ],
+            "meta keywords": [
+                "Boat charter in komodo, komodo boat package, boat in labuanbajo, boat rent, cheap tour package, flores package, komodo boat, labuanbajo boat charter, rent boat in labuanbajo, cruise in komodo, cruises package in komodo, komodo lines tours, rent motorcycle labuanbajo, rent motorcycle flores, rent car in flores, rent car in labuanbajo, rent bycycle in flores, flores overland, religious packages flores"
+            ],
+            "image_count": 8,
+            "image_with_alt": [
+                "Home",
+                "English",
+                "English",
+                "Bahasa Indonesia",
+                "Bahasa Indonesia",
+                "Facebook icon",
+                "Instagram icon",
+                "YouTube icon"
+            ],
+            "link_count": 24,
+            "h1_contents": [
+                "Komodo Lines"
+            ],
+            "h2_contents": [
+                "About Us"
+            ]
+        },
+        "\/content\/contact-us": {
+            "status_code": 200,
+            "title": [
+                "tur komodo, paket wisata ke komodo, wisata murah komodo"
+            ],
+            "meta description": [
+                "For Further Information, please contact us. Don't Hestitate to contact with Us"
+            ],
+            "meta keywords": [
+                "tur flores komodo, phinisi komodo, komodo phinisi, komodo yacht, boat flores, boat komodo"
+            ],
+            "image_count": 8,
+            "image_with_alt": [
+                "Home",
+                "English",
+                "English",
+                "Bahasa Indonesia",
+                "Bahasa Indonesia",
+                "Facebook icon",
+                "Instagram icon",
+                "YouTube icon"
+            ],
+            "link_count": 24,
+            "h1_contents": [],
+            "h2_contents": [
+                "Contact Us",
+                "Contact Us"
+            ]
+        },
+        "\/en?q=package-boat": {
+            "status_code": 200,
+            "title": [
+                "Boat Package | Kapal AC Murah Ke Komodo, Kapal AC Murah di Labuan Bajo, Charter Rental Sewa Kapal Phinisi Ke Komodo, Private Cruises Charter ke Pulau Komodo, sewa Kapal wisata ke pulau komodo, Sewa Kapal di Labuan Bajo, Kapal Kamar AC Ke Komodo"
+            ],
+            "meta description": [
+                "Komodolines.com menyediakan kapal wisata ke pulau komodo berbasis kamar AC dengan varian kapasitas mulai dari 1 kamar hingga 6 kamar tidur yang di lengkapi dengan kamar mandi yang terletak di luar kamar tidur dan di pakai bergantian. Paket Charter kapal yang kami sediakan menjangkau destinasi Taman Nasional Komodo, di antaranya : Pulau Rinca, Pulau Komodo, Pulau padar, pantai Merah, Gili Laba, kanawa, Pulau Bidadari dan pulau pulau kecil lainnya. kami Juga melayani charter dari Labuan bajo ke Lombok, atau dari Lombok ke Labuan bajo."
+            ],
+            "meta keywords": [
+                "charter kapal komodo, kapal komodo, boat komodo"
+            ],
+            "image_count": 28,
+            "image_with_alt": {
+                "0": "Home",
+                "1": "English",
+                "2": "English",
+                "3": "Bahasa Indonesia",
+                "4": "Bahasa Indonesia",
+                "25": "Facebook icon",
+                "26": "Instagram icon",
+                "27": "YouTube icon"
+            },
+            "link_count": 44,
+            "h1_contents": [],
+            "h2_contents": [
+                "Boat Package"
+            ]
+        },
+        "\/en?q=package-rent": {
+            "status_code": 200,
+            "title": [
+                "Package Rent | Komodo Lines"
+            ],
+            "meta description": [],
+            "meta keywords": [],
+            "image_count": 20,
+            "image_with_alt": {
+                "0": "Home",
+                "1": "English",
+                "2": "English",
+                "3": "Bahasa Indonesia",
+                "4": "Bahasa Indonesia",
+                "17": "Facebook icon",
+                "18": "Instagram icon",
+                "19": "YouTube icon"
+            },
+            "link_count": 36,
+            "h1_contents": [],
+            "h2_contents": [
+                "Package Rent"
+            ]
+        },
+        "\/en?q=package-tour": {
+            "status_code": 200,
+            "title": [
+                "Package Tour | Komodo Lines"
+            ],
+            "meta description": [],
+            "meta keywords": [],
+            "image_count": 32,
+            "image_with_alt": {
+                "0": "Home",
+                "1": "English",
+                "2": "English",
+                "3": "Bahasa Indonesia",
+                "4": "Bahasa Indonesia",
+                "29": "Facebook icon",
+                "30": "Instagram icon",
+                "31": "YouTube icon"
+            },
+            "link_count": 48,
+            "h1_contents": [],
+            "h2_contents": [
+                "Package Tour"
+            ]
+        },
+        "\/content\/terms-condition": {
+            "status_code": 200,
+            "title": [
+                "Terms & Condition | Komodo Lines"
+            ],
+            "meta description": [
+                "HOW TO BOOK : See the Tours Lists on the website, or choose a package on contact form, or you can discuss with our staff whether you need to modify the itineraries or using the sampling itineraries that we uploaded on this website. To enables us make the exact plan for you, please describe whether you will start to be picked up from your hotel or airport. Also, we need details of your flights if the departure is at the same date of your tours ended with us from flores."
+            ],
+            "meta keywords": [],
+            "image_count": 8,
+            "image_with_alt": [
+                "Home",
+                "English",
+                "English",
+                "Bahasa Indonesia",
+                "Bahasa Indonesia",
+                "Facebook icon",
+                "Instagram icon",
+                "YouTube icon"
+            ],
+            "link_count": 24,
+            "h1_contents": [],
+            "h2_contents": [
+                "Terms & Condition"
+            ]
+        }
+    },
+    "sitemap": {
+        "\/sitemap.xml": {
+            "status_code": 200,
+            "filename": "\/sitemap.xml"
+        },
+        "\/feeds\/posts\/default?orderby=updated": {
+            "status_code": 404,
+            "filename": "\/feeds\/posts\/default?orderby=updated"
+        },
+        "\/sitemap.xml.gz": {
+            "status_code": 404,
+            "filename": "\/sitemap.xml.gz"
+        },
+        "\/sitemap_index.xml": {
+            "status_code": 404,
+            "filename": "\/sitemap_index.xml"
+        },
+        "\/s2\/sitemaps\/profiles-sitemap.xml": {
+            "status_code": 404,
+            "filename": "\/s2\/sitemaps\/profiles-sitemap.xml"
+        },
+        "\/sitemap.php": {
+            "status_code": 404,
+            "filename": "\/sitemap.php"
+        },
+        "\/sitemap_index.xml.gz": {
+            "status_code": 404,
+            "filename": "\/sitemap_index.xml.gz"
+        },
+        "\/vb\/sitemap_index.xml.gz": {
+            "status_code": 404,
+            "filename": "\/vb\/sitemap_index.xml.gz"
+        },
+        "\/sitemapindex.xml": {
+            "status_code": 404,
+            "filename": "\/sitemapindex.xml"
+        },
+        "\/sitemap.gz": {
+            "status_code": 404,
+            "filename": "\/sitemap.gz"
+        }
+    },
+    "robots": {
+        "\/robots.txt": {
+            "status_code": 404,
+            "filename": "\/robots.txt"
+        }
+    },
+    "code": 200,
+    "url": "http:\/\/komodolines.com\/en"
+}

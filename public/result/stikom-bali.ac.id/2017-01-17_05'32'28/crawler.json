@@ -1,0 +1,335 @@
+{
+    "webcrawler": {
+        "http:\/\/stikom-bali.ac.id\/act\/": {
+            "status_code": 200,
+            "title": [
+                "STMIK STIKOM Bali - Sekolah Tinggi Manajemen Informatika Dan Teknik Komputer"
+            ],
+            "meta description": [
+                "Sekolah Tinggi Manajemen Informatika dan Teknik Komputer"
+            ],
+            "meta keywords": [],
+            "image_count": 29,
+            "image_with_alt": {
+                "0": "STMIK STIKOM Bali",
+                "13": "Last month",
+                "14": "Next month",
+                "24": "STMIK STIKOM Bali - Cross Cultural Program",
+                "25": "Lets Join with Us on STMIK STIKOM Bali"
+            },
+            "link_count": 131,
+            "h1_contents": [
+                ""
+            ],
+            "h2_contents": [
+                "Balma Audit Semua Ormawa",
+                "M-COS Menjuarai Ormawa League"
+            ]
+        },
+        "index.php": {
+            "status_code": 200,
+            "title": [
+                "STMIK STIKOM Bali - Sekolah Tinggi Manajemen Informatika Dan Teknik Komputer"
+            ],
+            "meta description": [
+                "Sekolah Tinggi Manajemen Informatika dan Teknik Komputer"
+            ],
+            "meta keywords": [],
+            "image_count": 29,
+            "image_with_alt": {
+                "0": "STMIK STIKOM Bali",
+                "13": "Last month",
+                "14": "Next month",
+                "24": "STMIK STIKOM Bali - Cross Cultural Program",
+                "25": "Lets Join with Us on STMIK STIKOM Bali"
+            },
+            "link_count": 131,
+            "h1_contents": [
+                ""
+            ],
+            "h2_contents": [
+                "Balma Audit Semua Ormawa",
+                "M-COS Menjuarai Ormawa League"
+            ]
+        },
+        "http:\/\/www.stikom-bali.ac.id\/act\/": {
+            "status_code": 200,
+            "title": [
+                "STMIK STIKOM Bali - Sekolah Tinggi Manajemen Informatika Dan Teknik Komputer"
+            ],
+            "meta description": [
+                "Sekolah Tinggi Manajemen Informatika dan Teknik Komputer"
+            ],
+            "meta keywords": [],
+            "image_count": 29,
+            "image_with_alt": {
+                "0": "STMIK STIKOM Bali",
+                "13": "Last month",
+                "14": "Next month",
+                "24": "STMIK STIKOM Bali - Cross Cultural Program",
+                "25": "Lets Join with Us on STMIK STIKOM Bali"
+            },
+            "link_count": 131,
+            "h1_contents": [
+                ""
+            ],
+            "h2_contents": [
+                "Balma Audit Semua Ormawa",
+                "M-COS Menjuarai Ormawa League"
+            ]
+        },
+        "profile\/sambutan.html": {
+            "status_code": 200,
+            "title": [
+                "Sambutan"
+            ],
+            "meta description": [
+                "Sekolah Tinggi Manajemen Informatika dan Teknik Komputer"
+            ],
+            "meta keywords": [],
+            "image_count": 4,
+            "image_with_alt": [
+                "STMIK STIKOM Bali",
+                "Dadang Hermawan - Ketua STMIK STIKOM Bali"
+            ],
+            "link_count": 63,
+            "h1_contents": [
+                ""
+            ],
+            "h2_contents": [
+                "Sambutan Ketua STIKOM Bali"
+            ]
+        },
+        "profile\/sejarah.html": {
+            "status_code": 200,
+            "title": [
+                "Sejarah"
+            ],
+            "meta description": [
+                "Sekolah Tinggi Manajemen Informatika dan Teknik Komputer"
+            ],
+            "meta keywords": [],
+            "image_count": 4,
+            "image_with_alt": [
+                "STMIK STIKOM Bali",
+                "STMIK STIKOM Bali"
+            ],
+            "link_count": 63,
+            "h1_contents": [
+                ""
+            ],
+            "h2_contents": [
+                "Sejarah STMIK STIKOM Bali"
+            ]
+        },
+        "profile\/visi-dan-misi.html": {
+            "status_code": 200,
+            "title": [
+                "Visi dan Misi"
+            ],
+            "meta description": [
+                "Sekolah Tinggi Manajemen Informatika dan Teknik Komputer"
+            ],
+            "meta keywords": [],
+            "image_count": 4,
+            "image_with_alt": [
+                "STMIK STIKOM Bali",
+                "Visi STMIK STIKOM Bali"
+            ],
+            "link_count": 63,
+            "h1_contents": [
+                ""
+            ],
+            "h2_contents": [
+                "Visi dan Misi STMIK STIKOM Bali"
+            ]
+        },
+        "profile\/tujuan.html": {
+            "status_code": 200,
+            "title": [
+                "Tujuan"
+            ],
+            "meta description": [
+                "Sekolah Tinggi Manajemen Informatika dan Teknik Komputer"
+            ],
+            "meta keywords": [],
+            "image_count": 3,
+            "image_with_alt": [
+                "STMIK STIKOM Bali"
+            ],
+            "link_count": 63,
+            "h1_contents": [
+                ""
+            ],
+            "h2_contents": [
+                "Tujuan STMIK STIKOM Bali"
+            ]
+        },
+        "profile\/arti-lambang.html": {
+            "status_code": 200,
+            "title": [
+                "Arti Lambang"
+            ],
+            "meta description": [
+                "Sekolah Tinggi Manajemen Informatika dan Teknik Komputer"
+            ],
+            "meta keywords": [],
+            "image_count": 12,
+            "image_with_alt": [
+                "STMIK STIKOM Bali",
+                "Transformasi Logo STMIK STIKOM Bali",
+                "Lambang STMIK STIKOM Bali - Gear",
+                "Lambang STMIK STIKOM Bali - Fire",
+                "Arti Lambang STMIK STIKOM Bali - Akademik",
+                "Arti Lambang STMIK STIKOM Bali - Hash",
+                "Arti Lambang STMIK STIKOM Bali - Flow",
+                "Arti Lambang STMIK STIKOM Bali - Leter",
+                "Arti Lambang STMIK STIKOM Bali - Wing",
+                "Lambang STMIK STIKOM Bali"
+            ],
+            "link_count": 63,
+            "h1_contents": [
+                ""
+            ],
+            "h2_contents": [
+                "Arti Lambang STMIK STIKOM Bali"
+            ]
+        },
+        "joomla-pages\/sistem-komputer-s1.html": {
+            "status_code": 200,
+            "title": [
+                "Sistem Komputer-S1"
+            ],
+            "meta description": [
+                "Sekolah Tinggi Manajemen Informatika dan Teknik Komputer"
+            ],
+            "meta keywords": [],
+            "image_count": 4,
+            "image_with_alt": [
+                "STMIK STIKOM Bali",
+                "Visi dan Misi Program Studi Sistem Komputer STMIK STIKOM Bali"
+            ],
+            "link_count": 61,
+            "h1_contents": [
+                ""
+            ],
+            "h2_contents": [
+                "Program Studi Sistem Komputer"
+            ]
+        },
+        "joomla-pages\/sistem-informasi-s1.html": {
+            "status_code": 200,
+            "title": [
+                "Sistem Informasi-S1"
+            ],
+            "meta description": [
+                "Sekolah Tinggi Manajemen Informatika dan Teknik Komputer"
+            ],
+            "meta keywords": [],
+            "image_count": 4,
+            "image_with_alt": [
+                "STMIK STIKOM Bali",
+                "Visi dan Misi Program Studi Sistem Informasi STMIK STIKOM Bali"
+            ],
+            "link_count": 61,
+            "h1_contents": [
+                ""
+            ],
+            "h2_contents": [
+                "Program Studi Sistem Informasi"
+            ]
+        },
+        "joomla-pages\/manajemen-informatika-d3.html": {
+            "status_code": 200,
+            "title": [
+                "Manajemen Informatika-D3"
+            ],
+            "meta description": [
+                "Sekolah Tinggi Manajemen Informatika dan Teknik Komputer"
+            ],
+            "meta keywords": [],
+            "image_count": 3,
+            "image_with_alt": [
+                "STMIK STIKOM Bali"
+            ],
+            "link_count": 61,
+            "h1_contents": [
+                ""
+            ],
+            "h2_contents": [
+                "Program Studi Manajemen Informatika"
+            ]
+        },
+        "keunggulan\/fasilitas.html": {
+            "status_code": 200,
+            "title": [
+                "Fasilitas"
+            ],
+            "meta description": [
+                "Sekolah Tinggi Manajemen Informatika dan Teknik Komputer"
+            ],
+            "meta keywords": [],
+            "image_count": 3,
+            "image_with_alt": [
+                "STMIK STIKOM Bali"
+            ],
+            "link_count": 60,
+            "h1_contents": [
+                ""
+            ],
+            "h2_contents": [
+                "Fasilitas STMIK STIKOM Bali"
+            ]
+        }
+    },
+    "sitemap": {
+        "\/sitemap.xml": {
+            "status_code": 404,
+            "filename": "\/sitemap.xml"
+        },
+        "\/feeds\/posts\/default?orderby=updated": {
+            "status_code": 404,
+            "filename": "\/feeds\/posts\/default?orderby=updated"
+        },
+        "\/sitemap.xml.gz": {
+            "status_code": 404,
+            "filename": "\/sitemap.xml.gz"
+        },
+        "\/sitemap_index.xml": {
+            "status_code": 404,
+            "filename": "\/sitemap_index.xml"
+        },
+        "\/s2\/sitemaps\/profiles-sitemap.xml": {
+            "status_code": 404,
+            "filename": "\/s2\/sitemaps\/profiles-sitemap.xml"
+        },
+        "\/sitemap.php": {
+            "status_code": 404,
+            "filename": "\/sitemap.php"
+        },
+        "\/sitemap_index.xml.gz": {
+            "status_code": 404,
+            "filename": "\/sitemap_index.xml.gz"
+        },
+        "\/vb\/sitemap_index.xml.gz": {
+            "status_code": 404,
+            "filename": "\/vb\/sitemap_index.xml.gz"
+        },
+        "\/sitemapindex.xml": {
+            "status_code": 404,
+            "filename": "\/sitemapindex.xml"
+        },
+        "\/sitemap.gz": {
+            "status_code": 404,
+            "filename": "\/sitemap.gz"
+        }
+    },
+    "robots": {
+        "\/robots.txt": {
+            "status_code": 200,
+            "filename": "\/robots.txt"
+        }
+    },
+    "code": 200,
+    "url": "http:\/\/stikom-bali.ac.id\/act\/"
+}

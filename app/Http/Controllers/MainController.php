@@ -13,13 +13,14 @@ use GuzzleHttp\HandlerStack;
 use GuzzleTor\Middleware;
 use GuzzleHttp\Client;
 
-use App\Jobs\GetPageSpeed;
-use App\Jobs\JobDomainInfo;
-use App\Jobs\JobDuplicateContent;
-use App\Jobs\JobSearchEngineIndex;
-use App\Jobs\JobKeywordFrequency;
-use App\Jobs\JobSocialInteraction;
+use App\Jobs\JobPageSpeed;
+use App\Jobs\JobDomainCheck;
+use App\Jobs\JobSearchEngine;
 use App\Jobs\JobCrawler;
+//use App\Jobs\JobDuplicateContent;
+//use App\Jobs\JobKeywordFrequency;
+//use App\Jobs\JobSocialInteraction;
+use App\Jobs\JobCompilingResult;
 
 use App\Domain;
 use App\QueueList;
@@ -31,9 +32,9 @@ use App\Library\GooglePageSpeed;
 use App\Library\Crawler;
 use App\Library\DomainInfo;
 use App\Library\SearchEngine;
-use App\Library\Majestic;
-use App\Library\DuplicateContent;
-use App\Library\SEOAssessment;
+//use App\Library\Majestic;
+//use App\Library\DuplicateContent;
+//use App\Library\SEOAssessment;
 
 class MainController extends Controller
 {
@@ -109,11 +110,13 @@ class MainController extends Controller
 
         $result['code'] = 200;
         $result['id'] = $this->queue_id;
+        $result['status'] = 1;
 
         return $result;
       }
       else
       {
+        $this->final_url['status'] = 0;
         return $this->final_url;
       }
     }
@@ -169,11 +172,11 @@ class MainController extends Controller
 
     public function processAll()
     {
-      //$this->pageSpeed('desktop');
-      //$this->pageSpeed('mobile');
-      //$this->domainInfo();
+      $this->pageSpeed('desktop');
+      $this->pageSpeed('mobile');
+      $this->domainInfo();
       //$this->duplicateContent();
-      //$this->searchIndex();
+      $this->searchIndex();
       //$this->keywordFrequency();
       //$this->socialInteraction();
       $this->crawler();
@@ -183,7 +186,7 @@ class MainController extends Controller
 
     public function pageSpeed($strategy)
     {
-      $job = (new GetPageSpeed(
+      $job = (new JobPageSpeed(
                   $this->url,
                   $strategy,
                   $this->current_id,
@@ -206,7 +209,7 @@ class MainController extends Controller
 
     public function domainInfo()
     {
-      $job = (new JobDomainInfo(
+      $job = (new JobDomainCheck(
                   $this->url,
                   $this->current_id,
                   $this->queue_id,
@@ -234,7 +237,7 @@ class MainController extends Controller
 
     public function searchIndex()
     {
-      $job = (new JobSearchEngineIndex(
+      $job = (new JobSearchEngine(
                   $this->url,
                   $this->current_id,
                   $this->queue_id,

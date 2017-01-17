@@ -1,4 +1,6 @@
 jQuery(document).ready(function($){
+setNavigation();
+
 	$('a').click(function(){
 		if ($(this).attr('data-href')){
 			var href = $(this).attr('data-href');
@@ -20,6 +22,29 @@ jQuery(document).ready(function($){
 		}
 	});
 
+	$('#insertDomain').submit(function(e){
+		e.preventDefault();
+		var contentUrl = $(this).attr('action');
+		var data = $(this).serialize();
+		var url = $('input[name="url"]').val();
+		console.log(contentUrl);
+		$.ajax({
+		  method: "POST",
+		  data: data,
+		  url: contentUrl,
+		  success : function(msg){
+		  	if(msg['status'] == 1){
+		  		notify(url,'Domain Status 200 and Added to Queue','','info','');
+		  	} else {
+		  		notify(url,msg['message'],'','danger','');
+		  	}
+		  },
+		  error : function(msg){
+		  	notify('failed','check your internet connection','','danger','');
+		  }
+		});
+	});
+
 	$('body').on('click', 'button[data-target="#immModal"]', function(evt){
 		var contentUrl = $(this).attr('data-content-url');
 		$.ajax({
@@ -35,6 +60,25 @@ jQuery(document).ready(function($){
 		});
 		return true;
 	});
+
+	function setNavigation() {
+	    var path = window.location.pathname;
+	    path = path.replace(/\/$/, "");
+	    path = decodeURIComponent(path);
+	    var nothome = 0;
+
+	    $(".nav a").each(function () {
+	        var href = $(this).attr('href');
+	        if (path.substring(0, href.length) === href) {
+	            $(this).closest('li').addClass('active');
+	            nothome = 1;
+	        }
+	    });
+
+	    if(nothome == 0){
+	    	$('.linkhome').addClass('active');
+	    }
+	}
 
 	function notify(title,msg,url,type,icon){
 		$.notify({

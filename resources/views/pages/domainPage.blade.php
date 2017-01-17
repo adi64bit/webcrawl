@@ -8,7 +8,7 @@
                 <p class="category"></p>
             </div>
             <div class="content">
-                <form action="{{ url(action('MainController@insertDomain')) }}" method="post" class="register-form">
+                <form action="{{ url(action('MainController@insertDomain')) }}" method="post" id="insertDomain">
                     {{ csrf_field() }}
                   <div class="input-group">
                     <span class="input-group-addon">http://www.</span>

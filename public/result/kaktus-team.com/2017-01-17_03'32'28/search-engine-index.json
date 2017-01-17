@@ -1,0 +1,15 @@
+{
+    "search_engine_index": {
+        "google": {
+            "result": "1",
+            "url": "https:\/\/www.google.com\/search?q=site:kaktus-team.com",
+            "code": 200
+        },
+        "bing": {
+            "result": "1",
+            "url": "https:\/\/www.bing.com\/search?q=site:kaktus-team.com",
+            "code": 200
+        }
+    },
+    "code": 200
+}

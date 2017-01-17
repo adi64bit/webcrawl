@@ -21,7 +21,7 @@ class JobCrawler implements ShouldQueue
 
     protected $queue_id;
 
-    protected $result;
+    //protected $result;
 
     protected $folder_name;
 
@@ -54,7 +54,6 @@ class JobCrawler implements ShouldQueue
       $crawler = new Crawler($this->url, $this->folder_name, $this->time, 10, 2);
       $crawler->traverse();
       $crawler->getLinks();
-
       QueueStatus::show('crawler', $this->queue_id, 2, 1);
       echo "[Crawler] \"Complete\" ".$this->folder_name."\n";
     }

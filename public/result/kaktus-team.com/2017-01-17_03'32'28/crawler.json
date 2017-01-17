@@ -1,0 +1,130 @@
+{
+    "webcrawler": {
+        "http:\/\/kaktus-team.com": {
+            "status_code": 200,
+            "title": [
+                "Kaktus team - web design & development"
+            ],
+            "meta description": [
+                ""
+            ],
+            "meta keywords": [
+                ""
+            ],
+            "image_count": 14,
+            "image_with_alt": {
+                "2": "Portfolio item",
+                "3": "Portfolio item",
+                "4": "Portfolio item",
+                "5": "Portfolio item",
+                "6": "Portfolio item",
+                "7": "Portfolio item"
+            },
+            "link_count": 24,
+            "h1_contents": [
+                "Tentang kami",
+                "PORTOFOLIO",
+                "Kontak"
+            ],
+            "h2_contents": [
+                "Web Design",
+                "Web Development",
+                "Web Maintenance",
+                "Kaktus Team",
+                "Prawira Pasek",
+                "Oka Nuantara",
+                "Try Agus",
+                "Guna Saputra",
+                "Putu Yoga"
+            ]
+        },
+        "https:\/\/www.kaktus-team.com\/": {
+            "status_code": 200,
+            "title": [
+                "Kaktus team - web design & development"
+            ],
+            "meta description": [
+                ""
+            ],
+            "meta keywords": [
+                ""
+            ],
+            "image_count": 14,
+            "image_with_alt": {
+                "2": "Portfolio item",
+                "3": "Portfolio item",
+                "4": "Portfolio item",
+                "5": "Portfolio item",
+                "6": "Portfolio item",
+                "7": "Portfolio item"
+            },
+            "link_count": 24,
+            "h1_contents": [
+                "Tentang kami",
+                "PORTOFOLIO",
+                "Kontak"
+            ],
+            "h2_contents": [
+                "Web Design",
+                "Web Development",
+                "Web Maintenance",
+                "Kaktus Team",
+                "Prawira Pasek",
+                "Oka Nuantara",
+                "Try Agus",
+                "Guna Saputra",
+                "Putu Yoga"
+            ]
+        }
+    },
+    "sitemap": {
+        "\/sitemap.xml": {
+            "status_code": 404,
+            "filename": "\/sitemap.xml"
+        },
+        "\/feeds\/posts\/default?orderby=updated": {
+            "status_code": 404,
+            "filename": "\/feeds\/posts\/default?orderby=updated"
+        },
+        "\/sitemap.xml.gz": {
+            "status_code": 404,
+            "filename": "\/sitemap.xml.gz"
+        },
+        "\/sitemap_index.xml": {
+            "status_code": 404,
+            "filename": "\/sitemap_index.xml"
+        },
+        "\/s2\/sitemaps\/profiles-sitemap.xml": {
+            "status_code": 404,
+            "filename": "\/s2\/sitemaps\/profiles-sitemap.xml"
+        },
+        "\/sitemap.php": {
+            "status_code": 404,
+            "filename": "\/sitemap.php"
+        },
+        "\/sitemap_index.xml.gz": {
+            "status_code": 404,
+            "filename": "\/sitemap_index.xml.gz"
+        },
+        "\/vb\/sitemap_index.xml.gz": {
+            "status_code": 404,
+            "filename": "\/vb\/sitemap_index.xml.gz"
+        },
+        "\/sitemapindex.xml": {
+            "status_code": 404,
+            "filename": "\/sitemapindex.xml"
+        },
+        "\/sitemap.gz": {
+            "status_code": 404,
+            "filename": "\/sitemap.gz"
+        }
+    },
+    "robots": {
+        "\/robots.txt": {
+            "status_code": 404,
+            "filename": "\/robots.txt"
+        }
+    },
+    "code": 200,
+    "url": "http:\/\/kaktus-team.com"
+}

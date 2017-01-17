@@ -15,8 +15,8 @@
             </div>
 
             <ul class="nav">
-                <li class="active">
-                    <a href="/">
+                <li class="linkhome">
+                    <a href="{{ url('/') }}">
                         <i class="pe-7s-graph"></i>
                         <p>Dashboard</p>
                     </a>
