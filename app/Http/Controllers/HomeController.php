@@ -48,7 +48,7 @@ class HomeController extends Controller
       $this->dispatch($job);*/
       //QueueStatus::show('crawler', $this->queue_id, 0);
         $json = json_decode(file_get_contents('result/komodolines.com/2017-01-16_07\'09\'01/crawler.json'), true);
-        $file['crawler'] = json_decode(file_get_contents('result/stikom-bali.ac.id/2017-01-17_05\'32\'28/crawler.json'), true);
+        $file['crawler'] = json_decode(file_get_contents('result/komodolines.com/2017-01-16_07\'09\'01/crawler.json'), true);
         $count = 1;
         $result['image']['found'] = 0;
         $result['image']['missing_alt'] = 0;
@@ -56,19 +56,19 @@ class HomeController extends Controller
       foreach ($file['crawler']['webcrawler'] as $key => $value) {
 
         //check title
-        if(strlen($value['title'][0]) > 0 && strlen($value['title'][0]) < 10){
+        if(isset($value['title'][0]) && strlen($value['title'][0]) > 0 && strlen($value['title'][0]) < 10){
           if(isset($result['title']['short'])){
             $result['title']['short']++;
           } else {
             $result['title']['short'] = 1;
           }
-        } elseif (strlen($value['title'][0]) >= 10 && strlen($value['title'][0]) <= 60) {
+        } elseif (isset($value['title'][0]) && strlen($value['title'][0]) >= 10 && strlen($value['title'][0]) <= 70) {
           if(isset($result['title']['good'])){
             $result['title']['good']++;
           } else {
             $result['title']['good'] = 1;
           }
-        } elseif(strlen($value['title'][0]) > 60 ){
+        } elseif(isset($value['title'][0]) && strlen($value['title'][0]) > 70 ){
           if(isset($result['title']['long'])){
             $result['title']['long']++;
           } else {
@@ -82,19 +82,19 @@ class HomeController extends Controller
           }
         }
         //check meta description
-        if(strlen($value['meta description'][0]) > 0 && strlen($value['meta description'][0]) < 100){
+        if(isset($value['meta description'][0]) && strlen($value['meta description'][0]) > 0 && strlen($value['meta description'][0]) < 100){
           if(isset($result['meta_description']['short'])){
             $result['meta_description']['short']++;
           } else {
             $result['meta_description']['short'] = 1;
           }
-        } elseif (strlen($value['meta description'][0]) >= 100 && strlen($value['meta description'][0]) <= 160 ) {
+        } elseif (isset($value['meta description'][0]) && strlen($value['meta description'][0]) >= 100 && strlen($value['meta description'][0]) <= 160 ) {
           if(isset($result['meta_description']['good'])){
             $result['meta_description']['good']++;
           } else {
             $result['meta_description']['good'] = 1;
           }
-        } elseif(strlen($value['meta description'][0]) > 160 ){
+        } elseif(isset($value['meta description'][0]) && strlen($value['meta description'][0]) > 160 ){
           if(isset($result['meta_description']['long'])){
             $result['meta_description']['long']++;
           } else {
@@ -120,12 +120,32 @@ class HomeController extends Controller
           $result['image']['with_alt']++;
         }
 
-        //check h1
+        //check h1 if same as title
+        foreach ($value['h1_contents'] as $h1 => $test) {
+          if(isset($value['title'][0]) && $test == $value['title'][0]){
+            if(isset($result['h1_same_as_title'])){
+              $result['h1_same_as_title'] ++;
+            } else {
+              $result['h1_same_as_title'] = 1;
+            }
+          }
+          
+        }
+        //check duplicate h1
         
+
+        //check missing h1
+        if(empty($value['h1_contents'])){
+          if(isset($result['h1_missing'])){
+            $result['h1_missing'] ++;
+          } else {
+            $result['h1_missing'] = 1;
+          }
+        }
       }
       $result['image']['missing_alt'] = $result['image']['found'] - $result['image']['with_alt'];
 
-        return view('pages.basePage');
+        return dd($result);
     }
 
     public function addDomain(){
