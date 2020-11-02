@@ -60,10 +60,10 @@ class SearchEngine
         ]);
         $res = $client->request('GET', GOOGLE_PAGE_INDEX_URL.$this->url, ['delay' => rand(5000,10000), 'cookies' => $jar]);
         $crawler = new DomCrawler((string)$res->getBody(true));
-        if($crawler->filter('div#resultStats')->count() > 0)
+        if($crawler->filter('div#result-stats')->count() > 0)
         {
-          $result = explode(' ', $crawler->filter('div#resultStats')->text());
-          if($result[0] == 'About')
+          $result = explode(' ', $crawler->filter('div#result-stats')->text());
+          if($result[0] == 'About' || $result[0] == 'Sekitar')
           {
             $this->result[SEARCH_ENGINE_INDEX]['google']['result'] = $result[1];
           }
@@ -71,6 +71,7 @@ class SearchEngine
           {
             $this->result[SEARCH_ENGINE_INDEX]['google']['result'] = $result[0];
           }
+          //$this->result[SEARCH_ENGINE_INDEX]['google']['result'] = $crawler->filter('div#result-stats')->text();
           $this->result[SEARCH_ENGINE_INDEX]['google']['code'] = 200;
         }
         else

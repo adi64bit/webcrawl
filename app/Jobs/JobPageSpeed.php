@@ -44,7 +44,7 @@ class JobPageSpeed implements ShouldQueue
     {
         echo "[Page Speed ".$this->strategy."] Start ".$this->folder_name."\n";
         QueueStatus::show('pagespeed_'.$this->strategy, $this->queue_id, 1, 0);
-        $pagespeed = new GooglePageSpeed($this->url, $this->folder_name, $this->time);
+        $pagespeed = new GooglePageSpeed($this->url, $this->folder_name, $this->time, $this->strategy);
         if($this->strategy == 'desktop')
         {
             $this->result = $pagespeed->desktop();

@@ -75,7 +75,7 @@ class MainController extends Controller
       {
         //#2
         $this->folder_name = GF::parseUrl($this->url);
-        $this->time = Carbon::now()->format('Y-m-d_H\'i\'s');
+        $this->time = Carbon::now()->format('Y-m-d_His');
 
         //#3
         if($this->checkDomain(GF::parseUrl($this->url))['count'] == 0)
@@ -163,7 +163,7 @@ class MainController extends Controller
       $result = array();
       $domain = Domain::where('url', $domain)->get();
       $result['count'] = count($domain);
-      if(count($domain) > 0)
+      if($result['count'] > 0)
       {
         $result['id'] = $domain[0]->domain_id;
       }
@@ -174,13 +174,13 @@ class MainController extends Controller
     {
       $this->pageSpeed('desktop');
       $this->pageSpeed('mobile');
-      $this->domainInfo();
+      //$this->domainInfo();
       //$this->duplicateContent();
-      $this->searchIndex();
+      //$this->searchIndex();
       //$this->keywordFrequency();
       //$this->socialInteraction();
       $this->crawler();
-      //$this->searchIndex();
+      $this->searchIndex();
       //$this->crawler();
     }
 

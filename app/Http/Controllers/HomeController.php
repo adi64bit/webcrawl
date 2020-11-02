@@ -23,8 +23,12 @@ class HomeController extends Controller
         $this->middleware('auth');
     }
 
-    public function dashboard(){
-        /*$time = "2017-01-05_07'04'11";
+    public function dashboard(){  
+      return view('pages.basePage');
+    }
+
+    public function temporarySave(){
+      /*$time = "2017-01-05_07'04'11";
         $timex = Carbon::now()->format('Y-m-d_H\'i\'s');
         $url = 'http://www.komodolines.com';
         $folder_name = 'www.komodolines.com';
@@ -47,105 +51,104 @@ class HomeController extends Controller
          
       $this->dispatch($job);*/
       //QueueStatus::show('crawler', $this->queue_id, 0);
-        $json = json_decode(file_get_contents('result/komodolines.com/2017-01-16_07\'09\'01/crawler.json'), true);
-        $file['crawler'] = json_decode(file_get_contents('result/komodolines.com/2017-01-16_07\'09\'01/crawler.json'), true);
-        $count = 1;
-        $result['image']['found'] = 0;
-        $result['image']['missing_alt'] = 0;
-        $result['image']['with_alt'] = 0;
-      foreach ($file['crawler']['webcrawler'] as $key => $value) {
+      $json = json_decode(file_get_contents('result/komodolines.com/2017-01-16_07\'09\'01/crawler.json'), true);
+      $file['crawler'] = json_decode(file_get_contents('result/komodolines.com/2017-01-16_07\'09\'01/crawler.json'), true);
+      $count = 1;
+      $result['image']['found'] = 0;
+      $result['image']['missing_alt'] = 0;
+      $result['image']['with_alt'] = 0;
+    foreach ($file['crawler']['webcrawler'] as $key => $value) {
 
-        //check title
-        if(isset($value['title'][0]) && strlen($value['title'][0]) > 0 && strlen($value['title'][0]) < 10){
-          if(isset($result['title']['short'])){
-            $result['title']['short']++;
-          } else {
-            $result['title']['short'] = 1;
-          }
-        } elseif (isset($value['title'][0]) && strlen($value['title'][0]) >= 10 && strlen($value['title'][0]) <= 70) {
-          if(isset($result['title']['good'])){
-            $result['title']['good']++;
-          } else {
-            $result['title']['good'] = 1;
-          }
-        } elseif(isset($value['title'][0]) && strlen($value['title'][0]) > 70 ){
-          if(isset($result['title']['long'])){
-            $result['title']['long']++;
-          } else {
-            $result['title']['long'] = 1;
-          }
+      //check title
+      if(isset($value['title'][0]) && strlen($value['title'][0]) > 0 && strlen($value['title'][0]) < 10){
+        if(isset($result['title']['short'])){
+          $result['title']['short']++;
         } else {
-           if(isset($result['title']['null'])){
-            $result['title']['null']++;
-          } else {
-            $result['title']['null'] = 1;
-          }
+          $result['title']['short'] = 1;
         }
-        //check meta description
-        if(isset($value['meta description'][0]) && strlen($value['meta description'][0]) > 0 && strlen($value['meta description'][0]) < 100){
-          if(isset($result['meta_description']['short'])){
-            $result['meta_description']['short']++;
-          } else {
-            $result['meta_description']['short'] = 1;
-          }
-        } elseif (isset($value['meta description'][0]) && strlen($value['meta description'][0]) >= 100 && strlen($value['meta description'][0]) <= 160 ) {
-          if(isset($result['meta_description']['good'])){
-            $result['meta_description']['good']++;
-          } else {
-            $result['meta_description']['good'] = 1;
-          }
-        } elseif(isset($value['meta description'][0]) && strlen($value['meta description'][0]) > 160 ){
-          if(isset($result['meta_description']['long'])){
-            $result['meta_description']['long']++;
-          } else {
-            $result['meta_description']['long'] = 1;
-          }
+      } elseif (isset($value['title'][0]) && strlen($value['title'][0]) >= 10 && strlen($value['title'][0]) <= 70) {
+        if(isset($result['title']['good'])){
+          $result['title']['good']++;
         } else {
-           if(isset($result['meta_description']['null'])){
-            $result['meta_description']['null']++;
-          } else {
-            $result['meta_description']['null'] = 1;
-          }
+          $result['title']['good'] = 1;
         }
-        //check status code
-        if(isset($result['status_code'][$value['status_code']])){
-          $result['status_code'][$value['status_code']]++;
+      } elseif(isset($value['title'][0]) && strlen($value['title'][0]) > 70 ){
+        if(isset($result['title']['long'])){
+          $result['title']['long']++;
         } else {
-          $result['status_code'][$value['status_code']] = 1;
+          $result['title']['long'] = 1;
         }
-
-        //check image 
-        $result['image']['found'] = $result['image']['found'] + $value['image_count'];
-        foreach ($value['image_with_alt'] as $altimg) {
-          $result['image']['with_alt']++;
-        }
-
-        //check h1 if same as title
-        foreach ($value['h1_contents'] as $h1 => $test) {
-          if(isset($value['title'][0]) && $test == $value['title'][0]){
-            if(isset($result['h1_same_as_title'])){
-              $result['h1_same_as_title'] ++;
-            } else {
-              $result['h1_same_as_title'] = 1;
-            }
-          }
-          
-        }
-        //check duplicate h1
-        
-
-        //check missing h1
-        if(empty($value['h1_contents'])){
-          if(isset($result['h1_missing'])){
-            $result['h1_missing'] ++;
-          } else {
-            $result['h1_missing'] = 1;
-          }
+      } else {
+         if(isset($result['title']['null'])){
+          $result['title']['null']++;
+        } else {
+          $result['title']['null'] = 1;
         }
       }
-      $result['image']['missing_alt'] = $result['image']['found'] - $result['image']['with_alt'];
+      //check meta description
+      if(isset($value['meta description'][0]) && strlen($value['meta description'][0]) > 0 && strlen($value['meta description'][0]) < 100){
+        if(isset($result['meta_description']['short'])){
+          $result['meta_description']['short']++;
+        } else {
+          $result['meta_description']['short'] = 1;
+        }
+      } elseif (isset($value['meta description'][0]) && strlen($value['meta description'][0]) >= 100 && strlen($value['meta description'][0]) <= 160 ) {
+        if(isset($result['meta_description']['good'])){
+          $result['meta_description']['good']++;
+        } else {
+          $result['meta_description']['good'] = 1;
+        }
+      } elseif(isset($value['meta description'][0]) && strlen($value['meta description'][0]) > 160 ){
+        if(isset($result['meta_description']['long'])){
+          $result['meta_description']['long']++;
+        } else {
+          $result['meta_description']['long'] = 1;
+        }
+      } else {
+         if(isset($result['meta_description']['null'])){
+          $result['meta_description']['null']++;
+        } else {
+          $result['meta_description']['null'] = 1;
+        }
+      }
+      //check status code
+      if(isset($result['status_code'][$value['status_code']])){
+        $result['status_code'][$value['status_code']]++;
+      } else {
+        $result['status_code'][$value['status_code']] = 1;
+      }
 
-        return dd($result);
+      //check image 
+      $result['image']['found'] = $result['image']['found'] + $value['image_count'];
+      foreach ($value['image_with_alt'] as $altimg) {
+        $result['image']['with_alt']++;
+      }
+
+      //check h1 if same as title
+      foreach ($value['h1_contents'] as $h1 => $test) {
+        if(isset($value['title'][0]) && $test == $value['title'][0]){
+          if(isset($result['h1_same_as_title'])){
+            $result['h1_same_as_title'] ++;
+          } else {
+            $result['h1_same_as_title'] = 1;
+          }
+        }
+        
+      }
+      //check duplicate h1
+      
+
+      //check missing h1
+      if(empty($value['h1_contents'])){
+        if(isset($result['h1_missing'])){
+          $result['h1_missing'] ++;
+        } else {
+          $result['h1_missing'] = 1;
+        }
+      }
+    }
+    $result['image']['missing_alt'] = $result['image']['found'] - $result['image']['with_alt'];
+    return dd($result);
     }
 
     public function addDomain(){

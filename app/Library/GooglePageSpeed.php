@@ -4,7 +4,8 @@ use Illuminate\Http\Response;
 use \Storage;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\File;
-
+use \PhpInsights\InsightsCaller;
+//AIzaSyAcKhHJfOIT5NQYYU0ACC5I_yqu2GdkCXE
 class GooglePageSpeed
 {
   //Array to store raw result from API request
@@ -19,21 +20,33 @@ class GooglePageSpeed
 
   protected $time;
 
-  public function __construct($url, $folder_name, $time)
+  public function __construct($url, $folder_name, $time, $strategy)
   {
-    $this->getResults($url);
+    $this->getResults($url, $strategy);
     $this->url = $url;
     $this->folder_name = $folder_name;
     $this->time = $time;
   }
 
   //Get all results from google page speed and store in array
-  protected function getResults($url)
+  protected function getResults($url, $strategy)
   {
-    $pageSpeed = new \PageSpeed\Insights\Service();
+    $caller = new InsightsCaller('AIzaSyAcKhHJfOIT5NQYYU0ACC5I_yqu2GdkCXE', 'en');
+    $desktopResult = null;
+    $mobileResult = null;
+    if ($strategy == 'desktop') {
+      //Desktop
+      $desktop = $caller->getResponse($url, InsightsCaller::STRATEGY_DESKTOP);
+      $desktopResult = $desktop->getMappedResult();
+    } else {
+      //Mobile
+      $mobile = $caller->getResponse($url, InsightsCaller::STRATEGY_MOBILE);
+      $mobileResult = $mobile->getMappedResult();
+    }
+
     $this->rawResult = array(
-      'desktop' => $pageSpeed->getResults($url, $locale = 'en_US', $strategy = 'desktop', array('screenshot' => 'true')),
-      'mobile'  => $pageSpeed->getResults($url, $locale = 'en_US', $strategy = 'mobile', array('screenshot' => 'true'))
+      'desktop' => $desktopResult,
+      'mobile'  => $mobileResult
     );
   }
 
@@ -41,20 +54,23 @@ class GooglePageSpeed
   protected function parseResult($strategy)
   {
     $data = $this->rawResult[$strategy];
-    $screenshot = $this->parseScreenshot($data);
-    $suggestions = $this->parseSuggestion($data);
+    // $screenshot = $this->parseScreenshot($data);
+    // $suggestions = $this->parseSuggestion($data);
+
+    // $this->finalResult[$strategy] = $data;
 
     $this->finalResult[$strategy] = array(
-      'code'         => $data['responseCode'],
+      // 'code'         => $data['responseCode'],
       'url'          => 'https://developers.google.com/speed/pagespeed/insights/?url='.$this->url,
-      'title'        => $data['title'],
-      'score'        => $data['ruleGroups']['SPEED']['score'],
-      'screenshot'   => $screenshot
+      // 'title'        => $data['title'],
+      // 'score'        => $data['ruleGroups']['SPEED']['score'],
+      'data'          => $data,
+      // 'screenshot'   => $screenshot
     );
 
-    foreach ($suggestions as $key => $value) {
-      $this->finalResult[$strategy]['suggestions'][] = $suggestions[$key];
-    }
+    // foreach ($suggestions as $key => $value) {
+    //   $this->finalResult[$strategy]['suggestions'][] = $suggestions[$key];
+    // }
   }
 
   //Parse website screenshot from raw data

@@ -8,6 +8,7 @@ use Symfony\Component\DomCrawler\Crawler as DomCrawler;
 use Carbon\Carbon;
 use \Storage;
 use GuzzleHttp\TransferStats;
+use App\Library\Checker\Checker;
 
 define('SITEMAP_VALIDATOR', 'https://www.xml-sitemaps.com/index.php?op=validate-xml-sitemap&go=1&sitemapurl=');
 
@@ -160,7 +161,8 @@ class Crawler
           */
           if($type == 'sitemap' && $statusCode == 200)
           {
-            $this->info[$type][$hash]['status_code'] = $this->validateSitemap($url);
+            // $this->info[$type][$hash]['status_code'] = $this->validateSitemap($url);
+            $this->info[$type][$hash]['status_code'] = $statusCode;
           }
           else
           {
@@ -298,48 +300,16 @@ class Crawler
 
     protected function extractTitleInfo(DomCrawler $crawler, $url)
     {
-        //Get page title
-        $this->info['webcrawler'][$url]['title'] = array();
-        $crawler->filterXPath('//head//title')->each(function (DomCrawler $node) use ($url) {
-            $this->info['webcrawler'][$url]['title'] = array(trim($node->text()));
-        });
+        $checker = new Checker($crawler);
 
-        $description = $crawler->filterXpath('//meta[@name="description"]')->extract(array('content'));
-        $keywords = $crawler->filterXPath('//meta[@name="keywords"]')->extract(array('content'));
-        $h1_count = $crawler->filter('h1')->count();
-        $h2_count = $crawler->filter('h2')->count();
-        $img_count = $crawler->filter('img')->count();
-        $link_count = $crawler->filter('a')->count();
-        $img_alt = 0;
-
-        $this->info['webcrawler'][$url]['meta description'] = $description;
-        $this->info['webcrawler'][$url]['meta keywords'] = $keywords;
-        $this->info['webcrawler'][$url]['image_count'] = $img_count;
-        $this->info['webcrawler'][$url]['image_with_alt'] = array();
-        $this->info['webcrawler'][$url]['link_count'] = $link_count;
-        $this->info['webcrawler'][$url]['h1_contents'] = array();
-        $this->info['webcrawler'][$url]['h2_contents'] = array();
-
-        if ($h1_count > 0) {
-            $crawler->filter('h1')->each(function (DomCrawler $node, $i) use ($url) {
-                $this->info['webcrawler'][$url]['h1_contents'][$i] = trim($node->text());
-            });
-        }
-
-        if ($h2_count > 0) {
-            $crawler->filter('h2')->each(function (DomCrawler $node, $i) use ($url) {
-                $this->info['webcrawler'][$url]['h2_contents'][$i] = trim($node->text());
-            });
-        }
-
-        if ($img_count > 0) {
-            $crawler->filter('img')->each(function (DomCrawler $node, $i) use ($url) {
-              if(trim($node->attr('alt')) != "")
-              {
-                $this->info['webcrawler'][$url]['image_with_alt'][$i] = trim($node->attr('alt'));
-              }
-            });
-        }
+        $this->info['webcrawler'][$url]['title'] = $checker->getTitle($crawler, $url);
+        $this->info['webcrawler'][$url]['description'] = $checker->getMetaDescription($crawler, $url);
+        $this->info['webcrawler'][$url]['keywords'] = $checker->getMetaKeyword($crawler, $url);
+        // $this->info['webcrawler'][$url]['meta'] = $checker->getMeta($crawler, $url);
+        $this->info['webcrawler'][$url]['heading'] = $checker->getHeader($crawler, $url);
+        $this->info['webcrawler'][$url]['hrefLang'] = $checker->getHrefLang($crawler, $url);
+        $this->info['webcrawler'][$url]['imagesAlt'] = $checker->getAltImage($crawler, $url);
+        $this->info['webcrawler'][$url]['openGraph'] = $checker->getOpenGraphMeta($crawler, $url);
     }
 
     protected function checkIfCrawlable($uri)

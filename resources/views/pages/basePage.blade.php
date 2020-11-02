@@ -1,4 +1,4 @@
-@extends('layout.template')
+@extends('layout.base')
 
 @section('content')
 	<div class="response-wrapper">

@@ -1,20 +1,69 @@
+// require('./component/common');
+//equire('./../../../node_modules/toastr/toastr');
+//require('./component/particleJS');
 
-/**
- * First we will load all of this project's JavaScript dependencies which
- * include Vue and Vue Resource. This gives a great starting point for
- * building robust, powerful web applications using Vue and Laravel.
- */
+import './component/common';
+import toastr from 'toastr';
 
-require('./bootstrap');
+jQuery(($) => {
+    function WebCrawler() {
+        const _this = this;
 
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
+        _this.scripts = [];
 
-Vue.component('example', require('./components/Example.vue'));
+        _this.toastr = null;
 
-const app = new Vue({
-    el: '#app'
+        _this.init = () => {
+            _this.toastr = toastr;
+            if (typeof WebCrawlerAdditionalScript !== 'undefined') {
+                _this.scripts = WebCrawlerAdditionalScript;
+            }
+            _this.clickFunc();
+            _this.insertDomain();
+        }
+
+        _this.clickFunc = () => {
+            $('body').on('click', '.btn[data-target="#immModal"]', function (evt) {
+                var contentUrl = $(this).attr('data-content-url');
+                $.ajax({
+                    method: "GET",
+                    url: contentUrl,
+                    success: function (response) {
+                        $('#immModal #modal-push').html(response);
+                    },
+                    error: function (msg) {
+                        $('#immModal #modal-push').html(msg['statusText']);
+                    }
+                });
+                return true;
+            });
+        };
+
+        _this.insertDomain = () => {
+            $('#insertDomain').on('submit', function (e) {
+                e.preventDefault();
+                var contentUrl = $(this).attr('action');
+                var data = $(this).serialize();
+                var url = $(this).find('[name="url"]').val();
+                $.ajax({
+                    method: "POST",
+                    data: data,
+                    url: contentUrl,
+                    success: function (msg) {
+                        if (msg['status'] == 1) {
+                            _this.toastr.success('Domain Status 200 and Added to Queue', url);
+                        } else {
+                            _this.toastr.error(msg['message'], url);
+                        }
+                    },
+                    error: function (msg) {
+                        _this.toastr.error('check your internet connection', 'failed');
+                    }
+                });
+            });
+        };
+    }
+
+    const App = new WebCrawler();
+    App.init();
 });

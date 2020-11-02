@@ -27,3 +27,6 @@ Route::get('logout', function(){
     Auth::logout();
     return redirect('/');
 })->middleware('auth');
+
+
+Route::resource('domain', 'domainController');
